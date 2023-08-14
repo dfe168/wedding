@@ -1,0 +1,11 @@
+{
+    "require": {
+        "izniburak/pdox": "^1.6",
+        "vlucas/phpdotenv": "^5.5",
+        "ircmaxell/password-compat": "^1.0",
+        "firebase/php-jwt": "^6.8"
+    }, 
+    "autoload": {
+        "classmap": ["classes/"]
+    }
+}
