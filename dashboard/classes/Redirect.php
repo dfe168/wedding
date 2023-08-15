@@ -8,7 +8,7 @@ class Redirect
      */
     public static function login()
     {
-        header('Location: 127.0.0.1/backend/login.php');
+        header('Location: 127.0.0.1/dashboard/login.php');
         exit();
     }
 
@@ -20,7 +20,7 @@ class Redirect
 
     public static function forbidden()
     {
-        header('Location: ../../frontend/error/403.html');
+        header('Location: ../../error/403.html');
         exit();
     }
 }

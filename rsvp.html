@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aanmeldingspagina</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+
+    <script src="./assets/js/formutil.js"></script>
+    <script src="./assets/js/loadrsvp.js"></script>
+
+</head>
+
+<div class="container">
+    <div class="py-2 text-center">
+        <img class="d-block mx-auto mb-4" src="./assets/img/rings.png" alt="" width="72" height="72">
+        <h1>Rayan & Rebaz Wedding</h1>
+        <h2>28/12/2023</h2>
+        <p>Will You Attend Our Wedding?
+            Please let us know whether or not you can make it to our wedding.</p>
+    </div>
+
+    <div id="flag"></div>
+    <div class="row">
+        <div class="card">
+            <div class="card-body">
+                <form method="post" action="./dashboard/api/form.php?api=saveFormData" id="myForm">
+                    <input type="hidden" name="token" id="tokenInput">
+                    <label for="adults">Can You Attend? </label>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="attend" id="attending" value="true"
+                            onchange="attendees(true)" checked>
+                        <label class="form-check-label" for="">YES</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="attend" id="notAttending" value="false"
+                            onchange="attendees(false)">
+                        <label class="form-check-label" for="inlineRadio2">NO</label>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-md-6 mb-3">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" name="name" id="name" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+
+                            <label for="lastName">Whatsapp number</label><br>
+                            <input type="tel" class="form-control no-spin" name="phone" id="phone" required>
+                        </div>
+                    </div>
+
+
+                    <div id="attendeed">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="adults">Number of adults:</label>
+                                <select name="adults" id="adults" class="form-control numPeople">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label>Number of children:</label>
+                                <select name="children" id="children" class="form-control numPeople">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                    <div class="d-grid gap-2 d-md-block">
+                        <button class="btn btn-primary" type="submit">Send</button>
+                        <button class="btn btn-primary" type="reset">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <iframe src="./footer.html" frameborder="0"></iframe>
+</div>
+
+
+
+
+</body>
+
+</html>

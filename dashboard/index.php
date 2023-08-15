@@ -18,7 +18,7 @@ if(!Auth::user()){
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="vendor/datatables/datatables/media/css/jquery.dataTables.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="../frontend/assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
 
   <script src="./assets/js/jquery.min.js"></script>
 
@@ -86,7 +86,7 @@ if(!Auth::user()){
 </body>
 
 
-<script src="../frontend/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="vendor/datatables/datatables/media/js/jquery.dataTables.min.js"></script>
 <script src="assets/js/main.js"></script>
 

@@ -1,3 +1,3 @@
-backend/.env
-backend/vendor
-frontend/node_modules
+dashboard/.env
+dashboard/vendor
+/node_modules

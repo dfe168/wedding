@@ -89,7 +89,7 @@ const parsingPhoneNum = (phoneNumber) => {
 if (token()) {
 
     /* POST request to API */
-    fetch('../backend/api/form.php?api=fetchFormData', {
+    fetch('./dashboard/api/form.php?api=fetchFormData', {
         method: 'post',
         headers: {
             "Content-Type": "application/json",

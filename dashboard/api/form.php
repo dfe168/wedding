@@ -25,7 +25,7 @@ function fetchFormData()
 
   $guest = Database::db()->table('guests')->where('id', $guestID)->get();
 
-  //fom not compleeted
+  //form not compleeted
   if ($guest->rsvp_completed == 0) {
     $response = [
       "name" => $guest->name,
@@ -54,37 +54,41 @@ function saveFormData()
   ];
 
   //validate token
-  if (isset($data['token']) && Token::validateToken($data['token'])) {
+  if ((isset($data['token']) && Token::validateToken($data['token']))) {
     $token = $data['token'];
 
     $guestID = Token::validateToken($token)->data->user;
-    Database::db()->table('guests')->where('id',$guestID)->update(["update_datetime"=>date('Y-m-d H:i:s')]);
+    Database::db()->table('guests')->where('id', $guestID)->update(["update_datetime" => date('Y-m-d H:i:s')]);
     //inset or update rsvp
     insert_rsvp($data);
-
-    
-
-
   } else { //new guest
-    //inset to table guests
-    try {
-      Database::db()->table('guests')->insert($params_guest);
-    } catch (\Throwable $th) {
-      return ['error ' => true];
-    }
 
-    //insert to table rsvp
-
-    try {
+    //als guest name bestaat update tabel -> guest en rsvp
+    if (Database::db()->table('guests')->where('name', $data['name'])->get()) {
+      Database::db()->table('guests')->where('name', $data['name'])->update(["phone"=>$data['phone'],"update_datetime" => date('Y-m-d H:i:s')]);
       insert_rsvp($data);
-    } catch (\Throwable $th) {
-      throw $th;
-      Redirect::forbidden();
+    } else {
+
+      //als geustname niet bestaat inset to table guests
+      try {
+        Database::db()->table('guests')->insert($params_guest);
+      } catch (\Throwable $th) {
+        return ['error ' => true];
+      }
+
+      //insert to table rsvp
+
+      try {
+        insert_rsvp($data);
+      } catch (\Throwable $th) {
+        throw $th;
+        Redirect::forbidden();
+      }
     }
   }
 
 
-  Redirect::to('../../frontend/completed.php?rsvp='.$_POST['attend']);
+  Redirect::to('../../completed.php?rsvp=' . $_POST['attend']);
 }
 
 
@@ -96,7 +100,7 @@ function insert_rsvp($data)
   Database::db()->table('guests')->where('id', $guestID)->update(["token" => $guesttoken]);
 
   $param_rsvp = [
-    "guest_id" => $guest->id,
+    //"guest_id" => $guest->id,
     "attend" => ($data['attend'] == 'true') ? 1 : 0,
     "adults" => $data['adults'],
     "children" => $data['children'],
@@ -122,8 +126,11 @@ function insert_rsvp($data)
   //check if guest_is exixts in table rsvp (insert or upate record)
   if (Database::db()->table('rsvp')->where('guest_id', $guestID)->get()) {
     //update all data in table rsvp
-    Database::db()->table('rsvp')->update($params);
+    Database::db()->table('rsvp')->where('guest_id', $guestID)->update($params);
   } else {
+    //add guert_id
+    $params['guest_id'] = $guest->id;
+
     //insert all data in table rsvp
     Database::db()->table('rsvp')->insert($params);
   }

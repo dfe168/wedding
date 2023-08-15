@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //check if form was submitted
     <div class="wrap">
         <form class="login-form" method="post">
             <div class="form-header">
-                <img src="../frontend/assets/img/rings.png" alt="" width="50%">
+                <img src="../assets/img/rings.png" alt="" width="50%">
                 <h3>Login</h3>
                 <p>Login to access your dashboard</p>
                 <p style="color:tomato;"><?php echo Session::flash('login_error') ?></p>
