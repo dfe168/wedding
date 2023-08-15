@@ -62,6 +62,9 @@ function saveFormData()
     //inset or update rsvp
     insert_rsvp($data);
 
+    
+
+
   } else { //new guest
     //inset to table guests
     try {
@@ -76,12 +79,12 @@ function saveFormData()
       insert_rsvp($data);
     } catch (\Throwable $th) {
       throw $th;
-      //return ['error ' => true];
+      Redirect::forbidden();
     }
   }
 
 
-  //redirest to send page
+  Redirect::to('../../frontend/completed.php?rsvp='.$_POST['attend']);
 }
 
 
