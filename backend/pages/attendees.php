@@ -25,7 +25,8 @@ $(document).ready(function() {
   var table = $('#table').DataTable({
     responsive: true,
     ajax: {
-      url: 'api/attendees.php?api=getAttendees',
+      url: 'api/guestInformation.php?api=getAttendees',
+      method:'post',
       dataSrc: ''
     },
     columns: [

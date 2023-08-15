@@ -47,7 +47,10 @@ if(!Auth::user()){
           <a href="index.php?p=attendees" class="link"><span class="fa fa-users mr-3"></span>Attendees</a>
         </li>
         <li>
-          <a href="index.php?p=" class="link"><span class="fa fa-times mr-3"></span>Not coming</a>
+          <a href="index.php?p=absent" class="link"><span class="fa fa-times mr-3"></span>Not coming</a>
+        </li>
+        <li>
+          <a href="index.php?p=formNotCompleted" class="link"><span class="fa fa-pause mr-3"></span>Waiting response</a>
         </li>
         <li>
           <a href="index.php?p=changePassword" class="link"><span class="fa fa-key mr-3"></span>Change your password</a>
