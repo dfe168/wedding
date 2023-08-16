@@ -2,3 +2,4 @@ dashboard/.env
 dashboard/vendor
 /node_modules
 /.vscode
+/git

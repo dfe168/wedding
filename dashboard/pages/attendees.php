@@ -82,9 +82,9 @@ $(document).ready(function() {
                       // Voeg meer rijen toe voor andere gegevens die je wilt weergeven
                       '</table></div> ' + 
                       '<div class="col">Return Flight<table style="font-weight: bold;">'+
-                      '<tr><td>Return date:</td><td>' + data.flight_in_datetime + '</td></tr>' +
-                      '<tr><td>Flight #:</td><td>' + data.flight_in_num + '</td></tr>' +
-                      '<tr><td>To:</td><td>' + data.flight_from + '</td></tr>' +
+                      '<tr><td>Return date:</td><td>' + data.flight_out_datetime + '</td></tr>' +
+                      '<tr><td>Flight #:</td><td>' + data.flight_out_num + '</td></tr>' +
+                      '<tr><td>To:</td><td>' + data.flight_to + '</td></tr>' +
                       // Voeg meer rijen toe voor andere gegevens die je wilt weergeven
                       '</table></div></div>';
 
