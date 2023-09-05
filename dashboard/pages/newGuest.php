@@ -111,7 +111,7 @@ if (!defined('INCLUDED')) {
     // Define the phone number and message
 
     //const phoneNumber = '+642718653'; // Replace with the recipient's phone number
-    const message = "Hello, this is a WhatsApp message!\n\n *Registration link:*\nhttp://127.0.0.1/wedding/rsvpacm.html?t="+token;
+    const message = "Hello, this is a WhatsApp message!\n\n *Registration link:*\nhttp://wedding.avesta.nl/rsvpacm.html?t="+token;
 
     // Encode the message and create the WhatsApp URL
     const encodedMessage = encodeURIComponent(message);
@@ -122,7 +122,7 @@ if (!defined('INCLUDED')) {
   }
 
   function copyToClipboard(token) {
-    const text = "http://127.0.0.1/wedding/rsvpacm.html?t="+token;
+    const text = "http://wedding.avesta.nl/rsvpacm.html?t="+token;
     // Create a temporary textarea element
     const textarea = document.createElement('textarea');
     textarea.value = text;
