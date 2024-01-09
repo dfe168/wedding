@@ -18,12 +18,12 @@
 </head>
 
 <div class="container">
+    
     <div class="py-2 text-center">
         <img class="d-block mx-auto mb-4" src="./assets/img/rings.png" alt="" width="72" height="72">
         <h1>Rayan & Rebaz Wedding</h1>
-        <h2>28/12/2023</h2>
-        <p>Will You Attend Our Wedding?
-            Please let us know whether or not you can make it to our wedding.</p>
+        <h2>28-12-2023</h2>
+        <p>Will you join us on our special day? Kindly RSVP by no later than <b style="color: #0d6efd;">18-11-2023</b> to confirm your attendance.</p>
     </div>
 
     <div id="flag"></div>
@@ -75,7 +75,7 @@
                                     <option value="10">10</option>
                                 </select>
                             </div>
-                            <div class="col-md-6 mb-3">
+                            <div class="col-md-6 mb-3" hidden>
                                 <label>Number of children:</label>
                                 <select name="children" id="children" class="form-control numPeople">
                                     <option value="0">0</option>
@@ -92,7 +92,7 @@
                             <div class="col">
                                 <label for="adults">Accommodation Required? </label>
                                 <br>
-                                ( Airporttransfer + Hotel)
+                                <span style="color: #0d6efd; font-weight: bold;">( Airport transfer & Hotel will be provided by us)</span>
                                 <br>
 
                                 <div class="form-check form-check-inline">
@@ -118,7 +118,8 @@
                                                     max="2023-12-28T18:00">
 
                                                 <label for="">Flight number</label>
-                                                <input type="text" class="form-control" id="in_flightnum" name="flight_in_num">
+                                                <input type="text" class="form-control" id="in_flightnum"
+                                                    name="flight_in_num">
                                                 <label for="">From</label>
                                                 <input type="text" class="form-control" id="from" name="from">
                                             </div>
@@ -134,7 +135,8 @@
                                                     name="flight_out_datetime" min="2023-12-29T00:00"
                                                     max="2023-12-30T23:59">
                                                 <label for="">Flight number</label>
-                                                <input type="text" class="form-control" id="out_flightnum" name="flight_out_num">
+                                                <input type="text" class="form-control" id="out_flightnum"
+                                                    name="flight_out_num">
                                                 <label for="">To</label>
                                                 <input type="text" class="form-control" id="to" name="to">
                                             </div>
