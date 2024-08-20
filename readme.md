@@ -7,7 +7,7 @@ This is a simple PHP-based wedding invitation application. Follow the steps belo
 1. **Set Up Database**
    - Create a new MySQL database.
    - Import the provided SQL file to create the necessary tables.
-   - Update the database configuration in the project (e.g., `config.php`, `.env`, or wherever your database settings are stored).
+   - Update the database configuration in the project (e.g., `.env`, or wherever your database settings are stored).
 
 2. **Install Node Dependencies**
    - Navigate to the root directory of the project.
