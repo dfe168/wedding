@@ -5,7 +5,7 @@ class Auth
     public static function login($name, $password)
     {
         $user = Database::db()->table('users')->where('name', $name)->get();
-
+        
         if ($user && password_verify($password, $user->password)) {
             session_regenerate_id(true);
 

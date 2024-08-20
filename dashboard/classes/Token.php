@@ -5,8 +5,8 @@ use Firebase\JWT\Key;
 
 class Token
 {
-    private static $key = 'ujOK?ag=b1Az'; // Change this to your secret key
-    private static $expiration = 86400; // 1 day in seconds
+    private static $key = $_ENV['SECRET_KEY']; 
+    private static $expiration = 86400; // tgis is 1 day in seconds
     
     public static function generateJWT($user, $expYear = false)
     {
@@ -19,7 +19,7 @@ class Token
         
         $data = [
             "user"=>$user,
-            "website"=>"127.0.0.1"
+            "website"=>$_ENV['ROOT']
         ];
 
         $tokenData = [

@@ -8,7 +8,7 @@ class Redirect
      */
     public static function login()
     {
-        header('Location: 127.0.0.1/dashboard/login.php');
+        header("Location:" .$_ENV("ROOT"). "/dashboard/login.php");
         exit();
     }
 
@@ -20,7 +20,7 @@ class Redirect
 
     public static function forbidden()
     {
-        header('Location: ../../error/403.html');
+        header("Location:" .$_ENV("ROOT"). "/error/403.html");
         exit();
     }
 }

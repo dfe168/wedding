@@ -1,59 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rayan & Rebaz Wedding</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    body {
-      font-family: 'Helvetica', sans-serif;
-      background-color: #f7f7f7;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-    .container {
-      text-align: center;
-      padding: 30px;
-      background-color: #fff;
-      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-      
-    }
-    h1, h2 {
-      margin: 10px 0;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="py-2 text-center">
-      <img class="d-block mx-auto mb-4" src="./assets/img/rings.png" alt="" width="72" height="72">
-      
-      <h1>Rayan & Rebaz Wedding</h1>
-      <h2>28/12/2023</h2>
-      <!-- <video id="myVideo" autoplay width="100%" height="50%">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rayan & Rebaz Wedding</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        font-family: "Helvetica", sans-serif;
+        background-color: #f7f7f7;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .container {
+        text-align: center;
+        padding: 30px;
+        background-color: #fff;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+      h1,
+      h2 {
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="py-2 text-center">
+        <img
+          class="d-block mx-auto mb-4"
+          src="./assets/img/rings.png"
+          alt=""
+          width="72"
+          height="72"
+        />
+
+        <h1>Rayan & Rebaz Wedding</h1>
+        <h2>28/12/2023</h2>
+        <!-- <video id="myVideo" autoplay width="100%" height="50%">
         <source src="./assets/img/BitesizedTotalCockerspaniel-mobile.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video> -->
 
-<img src="./assets/img/vd.gif" alt="">
-    
+        <div class="py-2">
+          <a href="rsvp.html" class="btn btn-primary">Normal invitation</a>
+          <a href="rsvpacm.html" class="btn btn-primary">VIP invitation</a>
+          <a href="./dashboard/" class="btn btn-danger">Dashboard</a>
+        </div>
+
+        <img src="./assets/img/vd.gif" alt="" />
+      </div>
     </div>
-  </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const video = document.getElementById('myVideo');
-      
-      // Voeg een klikgebeurtenis toe om de video af te spelen
-      document.body.addEventListener('click', () => {
-        video.play();
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const video = document.getElementById("myVideo");
+
+        // Voeg een klikgebeurtenis toe om de video af te spelen
+        document.body.addEventListener("click", () => {
+          video.play();
+        });
       });
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>

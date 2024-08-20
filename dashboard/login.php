@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //check if form was submitted
             </div>
             <!--name Input-->
             <div class="form-group">
-                <input type="text" name="name" class="form-input" placeholder="Name" required>
+                <input type="text" name="name" class="form-input" placeholder="admin" required>
             </div>
             <!--Password Input-->
             <div class="form-group">

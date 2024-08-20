@@ -139,7 +139,6 @@ function insert_rsvp($data)
   //set form completed to 1
   Database::db()->table('guests')->where('id', $guestID)->update(['rsvp_completed' => 1]);
 
-  //return Redirect::xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 }
 
